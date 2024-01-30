@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/* HEADER BAR */
+.header-bar {
+    position: absolute;
+    width: 1vw;
+    height: 0.1vh;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+.left-column {
+    color: red;
+}
