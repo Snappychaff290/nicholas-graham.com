@@ -5,12 +5,37 @@
 /* HEADER BAR */
 .header-bar {
     position: absolute;
-    width: 1vw;
-    height: 0.1vh;
-    background-color: red;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 8vh;
+    border: none;
+    border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin-left: 3vw;
+}
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20vw;
+    margin-right: 3vw;
+}
+/* HEADER STOP */
+body {
+    margin-top: 8vh;
+}
+.home-container {
+    display: grid;
+    grid-template-columns: 12;
+    margin-right: 60px;
+    margin-left: 60px;
 }
 .left-column {
-    color: red;
+    margin-top: 24px;
 }
