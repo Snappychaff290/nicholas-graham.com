@@ -1,0 +1,7 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Draw the letter "N" -->
+  <text x="10" y="40" font-family="Serif" font-size="40" fill="#ffbc0aff">N</text>
+  
+  <!-- Draw the letter "G" overlapping with "N" -->
+  <text x="18" y="48" font-family="Serif" font-size="40" fill="#ffbc0aff">G</text>
+</svg>

@@ -40,16 +40,37 @@ body {
     overflow-x: hidden;
     z-index: 99999;
 }
-.logo {
+.header-logo {
     margin-left: 3vw;
+    height: 10vh;
+    width: auto;
 }
 .header-links {
-    color: var(--yellow);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 15vw;
+    width: auto;
     margin-right: 4vw;
+    gap: 8vw;
+    transition-duration: 0.1s;
+}
+.header-link {
+    color: var(--yellow);
+    text-decoration: none;
+}
+.header-link:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+.puter::after {
+    content: "BETA";
+    font-size: 50%;
+    top: -15;
+    color: red;
+    position: fixed;
+    top: -16;
+    right: -5;
 }
 .logo {
     color: var(--yellow);
@@ -73,13 +94,18 @@ body {
 
 .name {
     display: inline-block;
-    align-self: last baseline;
+    align-self: center;
+    font-size: 3vw;
 }
 .name-compliment {
     color: var(--platinumtranslucent);
-    text-justify: center;
+    align-self: center;
+    display: inline-block;
 }
 .top-section-header {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
+    grid-column: 1 / span 4;
+    grid-row: 4 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
