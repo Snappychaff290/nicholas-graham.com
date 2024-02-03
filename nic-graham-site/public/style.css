@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: poppins;
+}
+/* CSS HEX */
+:root {
+    --gray: #2a2b2aff;
+    --platinum: #dfe0e2ff;
+    --platinumtranslucent: rgba(223, 224, 226, 0.8);
+    --brick: #f05d5eff;
+    --yellow: #ffbc0aff;
+    --purple: #7353baff;
+}
+body {
+    background-color: var(--gray);
+    margin-top: 8vh;
+}
+/* HEADER BAR */
+.header-bar {
+    /* color: antiquewhite; */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    width: 100%;
+    height: 8vh;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: 99999;
+}
+.header-logo {
+    margin-left: 1vw;
+    height: 10vh;
+    width: auto;
+    height: 8vh;
+}
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    margin-right: 4vw;
+    gap: 8vw;
+    transition-duration: 0.1s;
+}
+.header-link {
+    color: var(--yellow);
+    text-decoration: none;
+    font-size: 1vw;
+}
+.header-link:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+.puter::after {
+    content: "BETA";
+    font-size: 50%;
+    color: var(--brick);
+    position: absolute;
+    /* top: 0; */
+    /* right: -20; */
+}
+/* HEADER STOP */
+.section-1 {
+    color: var(--yellow);
+    width: 100%;
+    height: 100vh;
+    background-image: url(/nic-graham-site/public/img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 30vh 30vh 30vh;
+    gap: 30px;
+}
+
+.name {
+    display: inline-block;
+    align-self: center;
+    font-size: 3vw;
+}
+.name-compliment {
+    color: var(--platinumtranslucent);
+    align-self: center;
+    display: inline-block;
+}
+.top-section-header {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.section-2 {
+    position: relative;
+    top: 92vh;
+    width: 50vw;
+    color: var(--platinum);
+}
