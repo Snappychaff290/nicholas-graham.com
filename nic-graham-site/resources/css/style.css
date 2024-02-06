@@ -13,7 +13,8 @@
     --purple: #7353baff;
 }
 body {
-    background-color: var(--gray);
+    /* background-color: var(--gray); */
+    background-color: black;
     margin-top: 8vh;
 }
 /* HEADER BAR */
@@ -111,6 +112,10 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
+    /* TEST STUFF */
+    /* border: 4px black solid; */
+    /* border-radius: 8px; */
+    /* z-index: 99; */
 }
 .cta {
     background-color: var(--yellow);
@@ -140,5 +145,19 @@ body {
     position: relative;
     top: 92vh;
     width: 50vw;
+    padding-right: 40vw;
     color: var(--platinum);
+}
+
+#test:hover > #test::after {
+    opacity: 1;
+}
+.testy {
+    /* content: " "; */
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.21),
+        transparent 40%
+    );
+    z-index: 3;
 }

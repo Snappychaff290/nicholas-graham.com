@@ -8,7 +8,17 @@
             href="https://fonts.googleapis.com/css?family=Poppins"
             rel="stylesheet"
         />
-        <script href="../js/app.js" rel="script"></script>
+        <script href="../js/app.js" rel="script">
+            document.getElementById("test").onmousemove = (e) => {
+                for (const card of document.getElementsByClassName("testy")) {
+                    const rect = card.getBoundingClientRect(),
+                        x = e.clientX - rect.left,
+                        y = e.clientY - rect.top;
+                    card.style.setProperty("--mouse-x", `${x}px`);
+                    card.style.setProperty("--mouse-y", `${y}px`);
+                }
+            };
+        </script>
         <title>Nicholas Graham</title>
     </head>
     <!-- HEADER BAR -->
@@ -28,8 +38,8 @@
         </div>
     </div>
     <!-- END HEADER BAR -->
-    <body>
-        <div class="section-1">
+    <body id="test">
+        <div class="section-1 testy">
             <div class="top-section-header">
                 <p class="name-compliment">I am</p>
                 <h1 class="name">NICHOLAS GRAHAM</h1>
@@ -40,7 +50,7 @@
                 </a>
             </div>
         </div>
-        <div class="section-2">
+        <div class="section-2 testy">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vitae
             voluptates similique provident aut? Similique voluptate quidem totam
             architecto at sed molestiae alias doloribus necessitatibus aliquam,
@@ -158,5 +168,6 @@
             eaque mollitia aspernatur veritatis et vel dignissimos maxime
             praesentium accusantium omnis labore earum.
         </div>
+        <script src="../js/app.js" type="text/javascript"></script>
     </body>
 </html>
