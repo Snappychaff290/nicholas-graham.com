@@ -36,6 +36,7 @@ body {
     justify-content: space-between;
     align-items: center;
     overflow-x: hidden;
+    overflow-y: hidden;
     z-index: 99999;
 }
 .header-logo {
@@ -113,9 +114,9 @@ body {
     flex-direction: column;
     align-content: center;
     /* TEST STUFF */
-    /* border: 4px black solid; */
-    /* border-radius: 8px; */
-    /* z-index: 99; */
+    /* border: 4px rgba(0, 0, 0, 0.608) solid; */
+    border-radius: 8px;
+    z-index: 99;
 }
 .cta {
     background-color: var(--yellow);
@@ -147,17 +148,4 @@ body {
     width: 50vw;
     padding-right: 40vw;
     color: var(--platinum);
-}
-
-#test:hover > #test::after {
-    opacity: 1;
-}
-.testy {
-    /* content: " "; */
-    background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255, 255, 255, 0.21),
-        transparent 40%
-    );
-    z-index: 3;
 }
