@@ -96,7 +96,6 @@ body {
     grid-template-rows: 30vh 30vh 30vh;
     gap: 30px;
 }
-
 .name {
     display: inline-block;
     align-self: center;
@@ -148,4 +147,44 @@ body {
     width: 50vw;
     padding-right: 40vw;
     color: var(--platinum);
+}
+/* DELETE */
+.section-2 {
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.section-2:hover::before {
+    opacity: 1;
+}
+.section-2::before,
+.section-2::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+.section-2::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.section-2::after {
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.4),
+        transparent 40%
+    );
+    z-index: 1;
 }
