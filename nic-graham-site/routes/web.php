@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/in-progress', function () {
+    return view('placeholder');
+});
+
 Route::get('/puter', function () {
     return view('puter');
 });
