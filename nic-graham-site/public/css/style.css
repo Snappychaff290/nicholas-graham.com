@@ -52,7 +52,7 @@ body {
     justify-content: space-between;
     width: auto;
     margin-right: 4vw;
-    gap: 8vw;
+    gap: 6vw;
     transition-duration: 0.1s;
 }
 .puter {
@@ -107,6 +107,7 @@ body {
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
     grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
     gap: 30px;
+    /* padding: 0px 60px; */
 }
 .name {
     display: inline-block;
@@ -122,7 +123,7 @@ body {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     /* align-self: center; */
-    font-size: 3vw;
+    font-size: 3.4vw;
     font-weight: 800;
 }
 .name-compliment {
@@ -190,6 +191,10 @@ body {
 .section-2 {
     background-color: var(--platinum);
     height: 100vh;
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    gap: 30px;
+    padding: 0px 60px;
 }
 .section-3 {
     background-color: var(--gray);
