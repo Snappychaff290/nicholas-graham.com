@@ -10,7 +10,7 @@
     --platinum: #dfe0e2ff;
     --platinumtranslucent: rgba(223, 224, 226, 0.8);
     --brick: #f05d5eff;
-    --yellow: #ffbc0aff;
+    --yellow: #0496FF;
     --purple: #7353baff;
 }
 body {
@@ -111,8 +111,9 @@ body {
 }
 .name {
     display: inline-block;
-    background-color: var(--platinum);
-    background-image: linear-gradient(
+    /* background-color: var(--platinum); */
+    color: var(--yellow);
+    /* background-image: linear-gradient(
         to right,
         var(--purple),
         var(--brick),
@@ -121,7 +122,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
     /* align-self: center; */
     font-size: 3.4vw;
     font-weight: 800;
@@ -148,7 +149,7 @@ body {
     flex-direction: row;
     gap: 1vw;
     grid-column: 2 / span 3;
-    grid-row: 5 / span 1;
+    grid-row: 4 / span 1;
 }
 .cta-two a {
     border-radius: 3vw;
@@ -167,12 +168,13 @@ body {
 }
 .learn-more {
     color: var(--gray);
-    background-image: linear-gradient(
+    background-color: var(--yellow);
+    /* background-image: linear-gradient(
         to right,
         var(--purple),
         var(--brick),
         var(--yellow)
-    );
+    ); */
 }
 .download-cv {
     color: var(--platinum);
