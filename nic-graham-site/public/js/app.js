@@ -1,7 +1,7 @@
 //import "./bootstrap";
 
-document.getElementById("test").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("section-2")) {
+document.getElementById("pointer").onmousemove = (e) => {
+    for (const card of document.getElementsByClassName("section-1")) {
         const rect = card.getBoundingClientRect(),
             x = e.clientX - rect.left,
             y = e.clientY - rect.top;
