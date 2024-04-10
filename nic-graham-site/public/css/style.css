@@ -232,7 +232,9 @@ body {
 .hcihy .container-3 {
     border: 0.15em solid var(--brick);
 }
-.hcihy .container-1, .hcihy .container-2, .hcihy .container-3 {
+.hcihy .container-1,
+.hcihy .container-2,
+.hcihy .container-3 {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -244,20 +246,29 @@ body {
     position: relative;
     /* z-index: 0; */
 }
-.hcihy .container-1::after, .hcihy .container-2::after, .hcihy .container-3::after, .hcihy .container-1::before, .hcihy .container-2::before, .hcihy .container-3::before {
-    content: '';
+.hcihy .container-1::after,
+.hcihy .container-2::after,
+.hcihy .container-3::after,
+.hcihy .container-1::before,
+.hcihy .container-2::before,
+.hcihy .container-3::before {
+    content: "";
     display: block;
     position: absolute;
     background: var(--platinum);
     /* z-index: 1; */
 }
-.hcihy .container-1::after, .hcihy .container-2::after, .hcihy .container-3::after {
+.hcihy .container-1::after,
+.hcihy .container-2::after,
+.hcihy .container-3::after {
     left: -0.3em;
     right: -0.3em;
     top: 3em;
     bottom: 3em;
 }
-.hcihy .container-1::before, .hcihy .container-2::before, .hcihy .container-3::before {
+.hcihy .container-1::before,
+.hcihy .container-2::before,
+.hcihy .container-3::before {
     top: -0.3em; /* let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.*/
     bottom: -0.3em;
     left: 3em;
@@ -270,7 +281,7 @@ body {
     width: 95%;
     z-index: 1;
     /* display: flex; */
-    flex-direction:column;
+    flex-direction: column;
     /* align-content: center; */
 }
 .container-content h1 {
@@ -291,10 +302,28 @@ body {
     margin-top: 1em;
     border-radius: 20vw;
     background-color: var(--blue);
-    display: block;
+    display: flex;
     width: 100%;
     height: 7vh;
     transition: 0.1s;
+    text-decoration: none;
+    color: var(--gray);
+    align-content: center;
+    justify-content: center;
+}
+.container-content .backup-cta {
+    background-color: var(--platinum);
+    border: 2px solid var(--blue);
+}
+.container-content .old-site-link {
+    background-color: var(--brick);
+}
+.container-content a div {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 2.6em;
+    font-weight: 600;
 }
 .container-content a:hover {
     transform: scale(1.1);

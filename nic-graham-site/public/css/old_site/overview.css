@@ -1,0 +1,145 @@
+/* #f6c344 ALT */
+/* SPOTLIGHT STUFFS */
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+}
+
+body {
+    /* align-items: center; */
+    background-color: var(--bg-color);
+    /* display: flex; */
+    /* height: 100vh; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    color: #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aquamarine-glow {
+    text-shadow: 0 0 5px #38b947, 0 0 5px #38b947, 0 0 5px #38b947;
+}
+.red-glow {
+    text-shadow: 0 0 4px rgb(160, 0, 80), 0 0 5px rgb(160, 0, 80),
+        0 0 8px rgb(160, 0, 80);
+}
+
+.go-back {
+    align-self: center;
+    justify-self: center;
+    font-size: 128px;
+    color: white;
+    text-shadow: 0 0 5px #b49d18, 0 0 10px #b49d18, 0 0 8px #b49d18;
+}
+.back-header {
+    color: #ffffff;
+    align-self: center;
+    text-shadow: 0 0 2px #a8a8a8, 0 0 8px #c2c2c2, 0 0 4px #cecece;
+}
+
+#cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin: 16px;
+}
+.card {
+    flex: 1 0 400px;
+    min-height: 400px;
+    min-width: 400px;
+}
+
+#cards:hover > .card::after {
+    opacity: 1;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    /* cursor: pointer; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card::before,
+.card::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+.card::before {
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.card::after {
+    background: radial-gradient(
+        600px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.4),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.card > .card-content {
+    background-color: var(--card-color);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    inset: 1px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+}
+/* EXPAND ON HOVER */
+.card:hover {
+    cursor: pointer;
+    /* Expand On Hover */
+    transition: transform 0.2s ease-in-out; /* Add a transition for smooth scaling */
+    transform: scale(1.03);
+}
+
+/* ELEMENTS */
+.date {
+    color: #f6c344;
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    align-self: center;
+    border: solid #ccc 2px;
+    border-radius: 8px;
+    padding: 6px;
+}
+.title {
+    font-size: 24px;
+    align-self: center;
+}
+.description {
+    text-align: justify;
+}
+
+.card-content img {
+    opacity: 0.8;
+    size: 100% auto;
+}
