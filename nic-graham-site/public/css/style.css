@@ -56,13 +56,13 @@ body {
     transition-duration: 0.1s;
 }
 .puter {
-    color: var(--purple);
+    color: var(--platinum);
 }
 .about-me {
-    color: var(--brick);
+    color: var(--platinum);
 }
 .projects {
-    color: var(--blue);
+    color: var(--platinum);
 }
 .contact {
     color: var(--platinum);
@@ -205,8 +205,64 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
     gap: 30px;
-    padding: 0px 60px;
+    /* padding: 0px 60px; */
+}
+.section-2 h2 {
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 1;
+    align-self: last baseline;
+}
+.hcihy {
+    /* background-color: red; */
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* BORDER STUFFS */
+.hcihy .container-1, .hcihy .container-2, .hcihy .container-3 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 25%;
+    border-radius: 32px;
+    padding: 1em;
+    border: 0.15em solid var(--gray);
+    position: relative;
+    /* z-index: 0; */
+}
+.hcihy .container-1::after, .hcihy .container-2::after, .hcihy .container-3::after, .hcihy .container-1::before, .hcihy .container-2::before, .hcihy .container-3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: var(--platinum);
+    /* z-index: 1; */
+}
+.hcihy .container-1::after, .hcihy .container-2::after, .hcihy .container-3::after {
+    left: -0.3em;
+    right: -0.3em;
+    top: 3em;
+    bottom: 3em;
+}
+.hcihy .container-1::before, .hcihy .container-2::before, .hcihy .container-3::before {
+    top: -0.3em; /* let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.*/
+    bottom: -0.3em;
+    left: 3em;
+    right: 3em;
+}
+/* END BORDER STUFFS */
+
+.container-content {
+    position: relative;
+    width: 90%;
+    z-index: 1;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
 }
 .section-3 {
     background-color: var(--gray);
