@@ -202,7 +202,7 @@ body {
 
 .section-2 {
     background-color: var(--platinum);
-    height: 100vh;
+    height: 105vh;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
     grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
@@ -223,6 +223,15 @@ body {
     justify-content: space-between;
 }
 /* BORDER STUFFS */
+.hcihy .container-1 {
+    border: 0.15em solid var(--blue);
+}
+.hcihy .container-2 {
+    border: 0.15em solid var(--purple);
+}
+.hcihy .container-3 {
+    border: 0.15em solid var(--brick);
+}
 .hcihy .container-1, .hcihy .container-2, .hcihy .container-3 {
     display: flex;
     align-content: center;
@@ -231,7 +240,7 @@ body {
     width: 25%;
     border-radius: 32px;
     padding: 1em;
-    border: 0.15em solid var(--gray);
+    /* border: 0.15em solid var(--gray); */
     position: relative;
     /* z-index: 0; */
 }
@@ -258,11 +267,39 @@ body {
 
 .container-content {
     position: relative;
-    width: 90%;
+    width: 95%;
     z-index: 1;
-    display: flex;
+    /* display: flex; */
     flex-direction:column;
-    justify-content: center;
+    /* align-content: center; */
+}
+.container-content h1 {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1.4em;
+}
+.container-content h2 {
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 700;
+}
+.container-content ul {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+.container-content a {
+    margin-top: 1em;
+    border-radius: 20vw;
+    background-color: var(--blue);
+    display: block;
+    width: 100%;
+    height: 7vh;
+    transition: 0.1s;
+}
+.container-content a:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
+    cursor: pointer;
 }
 .section-3 {
     background-color: var(--gray);
