@@ -7,9 +7,10 @@
 /* CSS HEX */
 :root {
     --gray: #2a2b2aff;
+    --yellow: #ffa630ff;
     --platinum: #dfe0e2ff;
     --platinumtranslucent: rgba(223, 224, 226, 0.8);
-    --brick: #f05d5eff;
+    --red: #f93943;
     --blue: #0496ff;
     --purple: #7353baff;
 }
@@ -88,7 +89,7 @@ body {
 .puter::after {
     content: "BETA";
     font-size: 50%;
-    color: var(--brick);
+    color: var(--red);
     position: absolute;
     /* top: 0; */
     /* right: -20; */
@@ -116,15 +117,27 @@ body {
     gap: 30px;
     /* padding: 0px 60px; */
 }
+.gradient-words {
+    background-image: linear-gradient(
+        to right,
+        var(--blue),
+        var(--red),
+        var(--yellow)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
 .name {
     display: inline-block;
     /* background-color: var(--platinum); */
-    color: var(--blue);
+    /* color: var(--blue); */
     /* background-image: linear-gradient(
         to right,
-        var(--purple),
-        var(--brick),
-        var(--blue)
+        var(--blue),
+        var(--red),
+        var(--yellow)
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -181,17 +194,23 @@ body {
     background-color: var(--blue);
     /* background-image: linear-gradient(
         to right,
-        var(--purple),
-        var(--brick),
-        var(--blue)
+        var(--blue),
+        var(--red),
+        var(--yellow)
     ); */
+}
+.learn-more:hover {
+    background-color: var(--platinum);
 }
 .download-cv {
     color: var(--platinum);
     background-color: var(--gray);
-    border-color: var(--blue);
+    border-color: var(--yellow);
     opacity: 70%;
     border-style: solid;
+}
+.download-cv:hover {
+    border-color: var(--platinum);
 }
 .learn-more:hover,
 .download-cv:hover {
@@ -202,6 +221,7 @@ body {
 
 .section-2 {
     background-color: var(--platinum);
+    color: var(--gray);
     height: 105vh;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
@@ -227,10 +247,10 @@ body {
     border: 0.15em solid var(--blue);
 }
 .hcihy .container-2 {
-    border: 0.15em solid var(--purple);
+    border: 0.15em solid var(--red);
 }
 .hcihy .container-3 {
-    border: 0.15em solid var(--brick);
+    border: 0.15em solid var(--yellow);
 }
 .hcihy .container-1,
 .hcihy .container-2,
@@ -275,7 +295,10 @@ body {
     right: 3em;
 }
 /* END BORDER STUFFS */
-
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
 .container-content {
     position: relative;
     width: 95%;
@@ -293,6 +316,7 @@ body {
     margin-top: 1em;
     font-size: 1em;
     font-weight: 700;
+    display: inline-flex;
 }
 .container-content ul {
     margin-left: 2em;
@@ -316,7 +340,7 @@ body {
     border: 2px solid var(--blue);
 }
 .container-content .old-site-link {
-    background-color: var(--brick);
+    background-color: var(--yellow);
 }
 .container-content a div {
     align-self: center;
@@ -333,4 +357,194 @@ body {
 .section-3 {
     background-color: var(--gray);
     height: 100vh;
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 15vh 15vh 5vh 15vh 15vh 15vh;
+    gap: 30px;
+}
+.section-3 h2 {
+    font-size: 5em;
+    font-weight: 900;
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    align-self: last baseline;
+    color: var(--purple);
+}
+.section-3 p {
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 8;
+    font-size: 1.2em;
+    color: var(--platinum);
+}
+.section-3 .typography {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+}
+.section-3 .ui {
+    grid-column: 7 / span 2;
+    grid-row: 3 / span 1;
+}
+.section-3 h3 {
+    color: var(--platinum);
+    font-size: 2em;
+}
+.typography-border {
+    background-color: var(--gray);
+    grid-column: 2 / span 4;
+    grid-row: 4 / span 3;
+}
+.ui-border {
+    background-color: var(--gray);
+    grid-column: 7 / span 4;
+    grid-row: 4 / span 3;
+}
+.typography-border,
+.ui-border {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 32px;
+    padding: 1em;
+    border: 0.15em solid var(--platinum);
+    position: relative;
+    /* z-index: 0; */
+}
+.typography-border:before,
+.ui-border:before,
+.typography-border:after,
+.ui-border:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--gray);
+}
+.typography-border:before,
+.ui-border:before {
+    top: -0.3em; /* let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.*/
+    bottom: -0.3em;
+    left: 3em;
+    right: 3em;
+}
+.typography-border:after,
+.ui-border:after {
+    left: -0.3em;
+    right: -0.3em;
+    top: 3em;
+    bottom: 3em;
+}
+.typography-border img,
+.ui-border img {
+    z-index: 1;
+    height: auto;
+    border-radius: 32px;
+    /* overflow: hidden; */
+    overflow: clip;
+}
+.section-4 {
+    background-color: var(--platinum);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+    gap: 30px;
+}
+.section-4 h2 {
+    font-size: 5em;
+    font-weight: 900;
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    align-self: last baseline;
+    color: var(--gray);
+}
+.options {
+    /* background: red; */
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.option-1,
+.option-2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+    border-radius: 32px;
+    padding: 1em;
+    border: 0.15em solid var(--gray);
+    position: relative;
+    /* z-index: 0; */
+}
+.option-1:before,
+.option-2:before,
+.option-1:after,
+.option-2:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--platinum);
+}
+.option-1:before,
+.option-2:before {
+    top: -0.3em; /* let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.*/
+    bottom: -0.3em;
+    left: 3em;
+    right: 3em;
+}
+.option-1:after,
+.option-2:after {
+    left: -0.3em;
+    right: -0.3em;
+    top: 3em;
+    bottom: 3em;
+}
+.option-content {
+    width: 90%;
+    z-index: 1;
+    color: var(--gray);
+    /* display: flex; */
+    flex-direction: column;
+}
+.option-content h2 {
+    font-size: 3em;
+    text-align: center;
+}
+.option-content p {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+.option-content ul {
+    margin-left: 1.5em;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+.option-content a {
+    margin-top: 2em;
+    border-radius: 4em;
+    background-color: var(--gray);
+    display: block;
+    height: 8vh;
+    text-decoration: none;
+    color: var(--platinum);
+}
+.option-content a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.option-content a div {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 2.6em;
+    font-weight: 600;
+}
+.option-content a:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
+    cursor: pointer;
 }
