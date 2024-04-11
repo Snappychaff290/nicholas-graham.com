@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+*::selection {
+  background-color: var(--red);
+}
+/* CSS HEX */
+:root {
+  --gray: #2a2b2aff;
+  --yellow: #ffa630ff;
+  --platinum: #dfe0e2ff;
+  --platinumtranslucent: rgba(223, 224, 226, 0.8);
+  --red: #f93943;
+  --blue: #0496ff;
+  --purple: #7353baff;
+}
+/* HEADER BAR */
+.header-bar {
+  /* color: antiquewhite; */
+  background-image: linear-gradient(
+      to bottom,
+      #2a2b2aff,
+      rgba(42, 43, 42, 0)
+  );
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  height: 8vh;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 99999;
+}
+.header-logo {
+  margin-left: 1vw;
+  height: 10vh;
+  width: auto;
+  height: 8vh;
+}
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  margin-right: 4vw;
+  gap: 6vw;
+  transition-duration: 0.1s;
+}
+.puter {
+  color: var(--platinum);
+}
+.about-me {
+  color: var(--platinum);
+}
+.projects {
+  color: var(--platinum);
+}
+.contact {
+  color: var(--platinum);
+}
+.header-link {
+  /* color: var(--blue); */
+  text-decoration: none;
+  font-size: 0.8vw;
+}
+.header-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+}
+.header-logo-link {
+  transition-duration: 0.1s;
+}
+.header-logo-link:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+}
+.puter::after {
+  content: "BETA";
+  font-size: 50%;
+  color: var(--red);
+  position: absolute;
+  /* top: 0; */
+  /* right: -20; */
+}
+/* HEADER STOP */
+.gradient-words {
+  background-image: linear-gradient(
+      to right,
+      var(--blue),
+      var(--red),
+      var(--yellow)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+body {
+  height: 92vh;
+  display: grid;
+  grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+  grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+  gap: 30px;
+  background-color: var(--platinum);
+}
+body h2 {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  font-size: 3vw;
+}
+body h3 {
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 1;
+  font-size: 2vw;
+  font-weight: 300;
+}
+body p {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 1;
+  align-self: last baseline;
+}
+body h1 {
+  grid-column: 2 / span 3;
+  grid-row: 5 / span 1;
+  font-size: 3em;
+  font-weight: 900;
+}
+.image {
+  grid-row: 2 / span 4;
+  grid-column: 5 / span 5;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 32px;
+  padding: 1em;
+  border: 0.15em solid var(--gray);
+  position: relative;
+  /* z-index: 0; */
+}
+.image::before, .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--platinum);
+  /* z-index: 1; */
+}
+.image::after {
+  left: -0.3em;
+  right: -0.3em;
+  top: 3em;
+  bottom: 3em;
+}
+.image::before {
+  top: -0.3em; /* let it overlap a bit to prevent thin line which could appear during scaling in some browsers etc.*/
+  bottom: -0.3em;
+  left: 3em;
+  right: 3em;
+}
+.image img {
+  z-index: 1;
+}
