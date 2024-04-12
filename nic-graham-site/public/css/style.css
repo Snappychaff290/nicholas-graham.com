@@ -339,6 +339,37 @@ body {
     align-content: center;
     justify-content: center;
 }
+.container-content .media-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.container-content div .icon {
+    background-color: var(--platinum);
+    width: auto;
+    height: auto;
+    font-size: 3em;
+}
+.container-content div .linkedin:hover {
+    color: #0a66c2;
+}
+.container-content div .github:hover {
+    color: #39d353;
+}
+.container-content div .twitter:hover {
+    color: #181919;
+}
+.container-content div .instagram:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(to bottom, #4756a5, #ee2259, #efc35c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+.container-content div .discord:hover {
+    color: #4752c4;
+}
 .container-content .backup-cta {
     background-color: var(--platinum);
     border: 2px solid var(--blue);
@@ -399,7 +430,14 @@ body {
     grid-column: 2 / span 8;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    justify-content: space-between;
+}
+.typography-border img,
+.ui-border img {
+    height: auto;
+    object-fit: contain;
+    border-radius: 36px;
+    z-index: 1;
 }
 .typography-border,
 .ui-border {
@@ -407,8 +445,8 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
-    height: 100%;
-    width: 50%;
+    /* height: 100%;
+    width: auto; */
     border-radius: 32px;
     padding: 1em;
     border: 0.15em solid var(--platinum);
@@ -437,15 +475,6 @@ body {
     right: -0.3em;
     top: 3em;
     bottom: 3em;
-}
-.typography-border img,
-.ui-border img {
-    z-index: 1;
-    width: 35vw;
-    height: auto;
-    border-radius: 32px;
-    /* overflow: hidden; */
-    overflow: clip;
 }
 .section-4 {
     background-color: var(--platinum);
@@ -552,4 +581,5 @@ body {
     transform: scale(1.1);
     transition: 0.1s;
     cursor: pointer;
+    background-color: var(--blue);
 }

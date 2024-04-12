@@ -20,11 +20,20 @@ Route::get('/', function () {
 Route::get('/Old-Site', function () {
     return view('Old-Site');
 });
+Route::get('/blogs', function () {
+    return view('placeholder');
+});
+Route::get('/projects', function () {
+    return view('placeholder');
+});
 
 Route::get('/in-progress', function () {
     return view('placeholder');
 });
+Route::get('/contact', function () {
+    return view('placeholder');
+});
 
 Route::get('/puter', function () {
-    return view('puter');
+    return view('placeholder');
 });
