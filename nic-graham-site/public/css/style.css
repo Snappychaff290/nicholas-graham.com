@@ -226,7 +226,7 @@ body {
 .section-2 {
     background-color: var(--platinum);
     color: var(--gray);
-    height: 105vh;
+    height: auto;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
     grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
@@ -299,6 +299,9 @@ body {
     right: 3em;
 }
 /* END BORDER STUFFS */
+.hcihy div .container-content p {
+    font-size: .8rem;
+}
 .container-flex {
     display: flex;
     flex-direction: column;
@@ -392,8 +395,8 @@ body {
 .section-3 {
     background-color: var(--gray);
     min-height: 100vh;
-    height: 1200vh;
-    max-height: 120vh;
+    height: 120vh;
+    /* max-height: 120vh; */
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
     grid-template-rows: 15vh 15vh 5vh 15vh 15vh 15vh;

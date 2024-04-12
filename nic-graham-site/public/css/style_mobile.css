@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+  scroll-behavior: smooth;
+}
+:root {
+  --gray: #2a2b2aff;
+  --yellow: #ffa630ff;
+  --platinum: #dfe0e2ff;
+  --platinumtranslucent: rgba(223, 224, 226, 0.8);
+  --red: #f93943;
+  --blue: #0496ff;
+  --purple: #7353baff;
+}
+@media only screen and (max-width: 600px) {
+  .header-bar {
+    display: none;
+  }
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-content: center;
+  }
+  .top-section-header {
+    text-align: center;
+  }
+  .name-compliment {
+    font-size: .8rem;
+  }
+  .name {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: poppins;
+  }
+  .contact-me {
+    font-size: 1.6rem !important;
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw !important;
+    height: auto !important;
+    align-content: center;
+  }
+  .section-2 h2 {
+    align-self: center;
+  }
+  .hcihy {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container-1, .container-2, .container-3 {
+    width: 80vw !important;
+    align-self: center !important;
+    margin-bottom: 5vh;
+  }
+
+  .section-3 {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+  }
+  .images {
+    height: auto !important;
+    align-self: center;
+  }
+  .section-3 h2 {
+    font-size: 3rem;
+    align-self: center;
+  }
+  .section-3 h3 {
+    display: none;
+  }
+  .section-3 p {
+    width: 90%;
+    align-self: center;
+    font-size: 1rem;
+    margin-bottom: 1vh;
+  }
+  .section-3 .images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+  }
+  .section-3 .images div {
+    width: 90%;
+    margin-bottom: 2vh;
+  }
+  .images div img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-4 {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  .section-4 h2 {
+    font-size: 3rem;
+    align-self: center;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    align-self: center;
+  }
+  .options div {
+    width: 90%;
+    margin-bottom: 2vh;
+  }
+}
