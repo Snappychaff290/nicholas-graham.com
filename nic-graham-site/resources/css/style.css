@@ -300,7 +300,7 @@ body {
 }
 /* END BORDER STUFFS */
 .hcihy div .container-content p {
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 .container-flex {
     display: flex;
@@ -342,16 +342,36 @@ body {
     align-content: center;
     justify-content: center;
 }
-.container-content .media-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 .container-content div .icon {
     background-color: var(--platinum);
+    display: inline-block;
     width: auto;
     height: auto;
     font-size: 3em;
+}
+.slide {
+    animation: scroll 10s linear infinite;
+}
+.slide {
+    wrap: none;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    overflow: hidden;
+    width: 100%;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translatex(-100%);
+    }
 }
 .container-content div .linkedin:hover {
     color: #0a66c2;
@@ -392,6 +412,7 @@ body {
     transition: 0.1s;
     cursor: pointer;
 }
+
 .section-3 {
     background-color: var(--gray);
     min-height: 100vh;

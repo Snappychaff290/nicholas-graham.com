@@ -364,6 +364,11 @@ body {
     gap: 3vw;
     overflow: hidden;
     width: 100%;
+    background-color: linear-gradient(
+        to right var(--platinum),
+        rgba(223, 224, 226, 0),
+        var(--platinum)
+    );
 }
 @keyframes scroll {
     0% {
