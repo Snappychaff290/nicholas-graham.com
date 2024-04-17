@@ -1,0 +1,135 @@
+/* SMALL SCREENS */
+@media screen and (max-width: 15in) {
+  #cards {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)) !important;
+    grid-auto-rows: 200px !important;
+    grid-auto-flow: dense;
+    padding: 10px;
+    padding-left: 110px;
+  }
+  .card-content h1 {
+    font-size: 24px !important;
+  }
+  .card-content .icon-big {
+    margin-top: 14px;
+    font-size: 44px;
+  }
+
+  .education p,
+  .blockchain p {
+    color: #949494;
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 16px;
+    width: 80%;
+  }
+
+  /* BLOCKCHAIN */
+
+  .blockchain .blockchain-default {
+    font-size: 16px;
+    margin-left: 16px;
+    width: 80%;
+    display: none;
+  }
+  .blockchain .blockchain-alternate {
+    display: inline-block;
+  }
+  /* DEVELOPMENT */
+  .development-grid .history,
+  .hobby-grid .history,
+  .persuit-grid .history {
+    display: none;
+  }
+  .development-grid .favorites,
+  .hobby-grid .favorites,
+  .persuit-grid .favorites {
+    display: none;
+  }
+  .development-grid,
+  .hobby-grid,
+  .persuit-grid {
+    margin-top: 4%;
+  }
+  .development p,
+  .hobbies p,
+  .persuits p {
+    color: #949494;
+    font-size: 12px;
+    display: inline-block;
+  }
+  .development h2,
+  .hobbies h2,
+  .persuits h2 {
+    color: #e6e6e6;
+    font-size: 14px;
+    font-weight: bold;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  .development,
+  .hobbies,
+  .persuits {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+  }
+  .development-header {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+  /* AI */
+  .AI h1,
+  .web-dev h1 {
+    white-space: nowrap;
+  }
+  .AI p,
+  .web-dev p {
+    color: #949494;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 8px;
+    width: 95%;
+    margin-top: 0;
+  }
+  /* AICHAT */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 85%;
+    height: 90%;
+    background: #232323;
+    border: solid 2px #323232;
+    border-radius: 32px;
+    z-index: 99999;
+  }
+  .chat-exit {
+    font-size: 48px;
+  }
+  .submit-icon {
+    font-size: 28px;
+    padding: 6px;
+    border: solid #323232 2px;
+  }
+  .chat-input {
+    font-size: 24px;
+    height: 60px;
+  }
+  .answer-box h1 {
+    font-size: 22px;
+    white-space: wrap;
+    text-align: center;
+    z-index: 1;
+  }
+  .answer-box p {
+    color: #949494;
+    font-size: 20px;
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,59 @@
+@media screen and (max-width: 630px) {
+  #cards .big {
+    grid-column: span 1 !important;
+  }
+  #cards .wide {
+    grid-column: span 1 !important;
+  }
+  .card-content .icon-big {
+    margin-top: 14px;
+    font-size: 28px;
+  }
+  .wide {
+    grid-row: span 2;
+  }
+  .development,
+  .hobbies,
+  .persuits {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5%;
+  }
+  .development-grid,
+  .hobby-grid,
+  .persuit-grid {
+    margin-top: 0;
+  }
+  .name h2 {
+    font-size: 10px;
+  }
+  .selfie {
+    /* BACKGROUND STUFFS */
+    background-image: url("/img/Selfie_3-removebg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110% auto !important;
+  }
+
+  /* AICHAT */
+
+  .chat-exit {
+    font-size: 32px;
+  }
+  .chat-input {
+    font-size: 20px;
+    height: 60px;
+  }
+  .answer-box h1 {
+    padding: 2px 4px;
+    font-size: 18px;
+    white-space: wrap;
+    text-align: center;
+    z-index: 1;
+  }
+  .answer-box p {
+    color: #949494;
+    font-size: 16px;
+    white-space: pre-wrap;
+  }
+}
