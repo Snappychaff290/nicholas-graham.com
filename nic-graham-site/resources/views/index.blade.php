@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="css/style.css" rel="stylesheet" />
-        <link href="css/style_mobile.css" rel="stylesheet" />
+        @vite(['resources/js/app.js', 'resources/css/style.css', 'resources/css/style_mobile.css', 'build'])
+        <!-- <link href="css/style.css" rel="stylesheet" />
+        <link href="css/style_mobile.css" rel="stylesheet" /> -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -15,8 +16,8 @@
             src="https://kit.fontawesome.com/509a141bf1.js"
             crossorigin="anonymous"
         ></script>
-        <script href="js/app.js" rel="script"></script>
-        <script href="../js/app.js" rel="script"></script>
+        <!-- <script href="js/app.js" rel="script"></script>
+        <script href="../js/app.js" rel="script"></script> -->
         <title>Nicholas Graham</title>
     </head>
     <!-- HEADER BAR -->
