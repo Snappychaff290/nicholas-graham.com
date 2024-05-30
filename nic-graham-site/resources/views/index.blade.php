@@ -43,7 +43,7 @@
                 <p class="name-compliment">Web Design | Web Development</p>
             </div>
             <div class="cta-two">
-                <a class="learn-more" href="#section-2">
+                <a class="learn-more" href="#section-3">
                     <h1 class="contact-me">Learn More</h1>
                 </a>
                 <a
@@ -54,10 +54,56 @@
                     <h1 class="contact-me">Download CV</h1>
                 </a>
             </div>
+            <div class="hcihy hcihy-section-1">
+                <div class="container-1">
+                    <div class="container-content">
+                        <h1>Web Design</h1>
+                        <h2>Figma</h2>
+                        <p>
+                            I am experienced with web design in Figma and would
+                            happily do design work for you, this would include:
+                        </p>
+                        <ul>
+                            <li>Typography</li>
+                            <li>Color Pallet</li>
+                            <li>UI</li>
+                            <li>UX</li>
+                        </ul>
+                        <p>
+                            Learn more about what this entails by clicking the
+                            Explore button below!
+                        </p>
+                        <a href="/contact"><div>Contact Me</div></a>
+                        <a href="#section-3" class="backup-cta"
+                            ><div>Explore</div></a
+                        >
+                    </div>
+                </div>
+                <div class="container-2">
+                    <div class="container-content">
+                        <h1>Web Development</h1>
+                        <h2>WordPress</h2>
+                        <p>
+                            I will build you a site on WordPress based off
+                            designs that myself (or another) have created.
+                            WordPress has withstood the test of time and is
+                            trusted by a majority of sites that are opperating
+                            on the internet.
+                        </p>
+                        <h2>WebFlow</h2>
+                        <p>
+                            I will build you a site on WebFlow based off designs
+                            that myself (or another) have created. WebFlow will
+                            allow for more modern design, with smoother and
+                            easier animation.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section-2" id="section-2">
+        {{-- <div class="section-2" id="section-2">
             <h2>How can I help you...</h2>
-            <div class="hcihy">
+            <div class="hcihy hcihy-section-2">
                 <div class="container-1">
                     <div class="container-content">
                         <h1>Web Design</h1>
@@ -181,7 +227,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="section-3" id="section-3">
             <h2 class="gradient-words">Web Design</h2>
             <p>

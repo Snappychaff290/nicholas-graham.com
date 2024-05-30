@@ -107,7 +107,8 @@ body {
 }
 .section-1 {
     width: 100%;
-    height: 92vh;
+    min-height: 92vh;
+    height: auto;
     /* background-image: url(img/Background_2_Unblurred.png); */
     background-position: center;
     background-repeat: no-repeat;
@@ -116,7 +117,7 @@ body {
     top: 0;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
-    grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
+    grid-template-rows: 2vh 15vh 15vh 15vh 15vh 15vh;
     gap: 30px;
     /* padding: 0px 60px; */
 }
@@ -173,7 +174,7 @@ body {
     flex-direction: row;
     gap: 1vw;
     grid-column: 2 / span 3;
-    grid-row: 4 / span 1;
+    grid-row: 5 / span 1;
 }
 .cta-two a {
     border-radius: 5vw;
@@ -222,6 +223,17 @@ body {
     transition-duration: 0.1s;
     cursor: pointer;
 }
+.hcihy-section-1 {
+    height: fit-content;
+    grid-column: 6 / span 4;
+    grid-row: 2 / span 3;
+    color: var(--platinum);
+}
+.hcihy-setion-1 div {
+    width: 40%;
+    height: auto;
+    font-size: 1vw;
+}
 
 .section-2 {
     background-color: var(--platinum);
@@ -238,10 +250,12 @@ body {
     grid-row: 1 / span 1;
     align-self: last baseline;
 }
-.hcihy {
-    /* background-color: red; */
+.hcihy-section-2 {
     grid-row: 2 / span 4;
     grid-column: 2 / span 8;
+}
+.hcihy {
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -262,8 +276,8 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
-    height: 100%;
-    width: 25%;
+    height: auto;
+    width: 40%;
     border-radius: 32px;
     padding: 1em;
     /* border: 0.15em solid var(--gray); */
@@ -279,7 +293,7 @@ body {
     content: "";
     display: block;
     position: absolute;
-    background: var(--platinum);
+    background: var(--gray);
     /* z-index: 1; */
 }
 .hcihy .container-1::after,
@@ -309,13 +323,14 @@ body {
 .container-content {
     position: relative;
     width: 95%;
+    height: auto;
     z-index: 1;
     /* display: flex; */
     flex-direction: column;
     /* align-content: center; */
 }
 .container-content h1 {
-    margin-top: 1em;
+    margin-top: 0.5em;
     text-align: center;
     font-size: 1.4em;
 }
@@ -364,6 +379,11 @@ body {
     gap: 3vw;
     overflow: hidden;
     width: 100%;
+    background-color: linear-gradient(
+        to right var(--platinum),
+        rgba(223, 224, 226, 0),
+        var(--platinum)
+    );
 }
 @keyframes scroll {
     0% {
@@ -394,8 +414,9 @@ body {
     color: #4752c4;
 }
 .container-content .backup-cta {
-    background-color: var(--platinum);
+    background-color: var(--gray);
     border: 2px solid var(--blue);
+    color: var(--platinum);
 }
 .container-content .old-site-link {
     background-color: var(--yellow);
@@ -404,18 +425,23 @@ body {
     align-self: center;
     justify-self: center;
     text-align: center;
-    font-size: 2.6em;
+    /* font-size: 2rem; */
+    font-size: 2.2vw;
     font-weight: 600;
 }
 .container-content a:hover {
     transform: scale(1.1);
     transition: 0.1s;
     cursor: pointer;
+    color: var(--gray);
+    background-color: var(--platinum);
+    border: none;
 }
 
 .section-3 {
-    background-color: var(--gray);
-    min-height: 100vh;
+    background-color: var(--platinum);
+    padding-top: 4vh;
+    min-height: 96vh;
     height: 120vh;
     /* max-height: 120vh; */
     display: grid;
@@ -424,7 +450,7 @@ body {
     gap: 2.6vw;
 }
 .section-3 h2 {
-    font-size: 5em;
+    font-size: 6vw;
     font-weight: 900;
     grid-column: 2 / span 4;
     grid-row: 1 / span 1;
@@ -435,7 +461,7 @@ body {
     grid-row: 2 / span 4;
     grid-column: 2 / span 8;
     font-size: 1.2em;
-    color: var(--platinum);
+    color: var(--gray);
 }
 .section-3 .typography {
     grid-column: 2 / span 2;
@@ -446,7 +472,7 @@ body {
     grid-row: 3 / span 1;
 }
 .section-3 h3 {
-    color: var(--platinum);
+    color: var(--gray);
     font-size: 2em;
 }
 .images {
@@ -465,7 +491,7 @@ body {
 }
 .typography-border,
 .ui-border {
-    background-color: var(--gray);
+    background-color: var(--platinum);
     display: flex;
     align-content: center;
     justify-content: center;
@@ -473,7 +499,7 @@ body {
     width: auto; */
     border-radius: 32px;
     padding: 1em;
-    border: 0.15em solid var(--platinum);
+    border: 0.15em solid var(--gray);
     position: relative;
     /* z-index: 0; */
 }
@@ -484,7 +510,7 @@ body {
     content: "";
     display: block;
     position: absolute;
-    background: var(--gray);
+    background: var(--platinum);
 }
 .typography-border:before,
 .ui-border:before {
@@ -501,8 +527,9 @@ body {
     bottom: 3em;
 }
 .section-4 {
-    background-color: var(--platinum);
-    height: 100vh;
+    background-color: var(--gray);
+    padding-top: 4vh;
+    min-height: 96vh;
     display: grid;
     grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
     grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh;
@@ -514,7 +541,7 @@ body {
     grid-column: 2 / span 4;
     grid-row: 1 / span 1;
     align-self: last baseline;
-    color: var(--gray);
+    color: var(--platinum);
 }
 .options {
     /* background: red; */
@@ -533,7 +560,7 @@ body {
     width: 30%;
     border-radius: 32px;
     padding: 1em;
-    border: 0.15em solid var(--gray);
+    border: 0.15em solid var(--platinum);
     position: relative;
     /* z-index: 0; */
 }
@@ -544,7 +571,7 @@ body {
     content: "";
     display: block;
     position: absolute;
-    background: var(--platinum);
+    background: var(--gray);
 }
 .option-1:before,
 .option-2:before {
@@ -563,7 +590,7 @@ body {
 .option-content {
     width: 90%;
     z-index: 1;
-    color: var(--gray);
+    color: var(--platinum);
     /* display: flex; */
     flex-direction: column;
 }
@@ -583,11 +610,11 @@ body {
 .option-content a {
     margin-top: 2em;
     border-radius: 4em;
-    background-color: var(--gray);
+    background-color: var(--platinum);
     display: block;
     height: 8vh;
     text-decoration: none;
-    color: var(--platinum);
+    color: var(--gray);
 }
 .option-content a {
     display: flex;
