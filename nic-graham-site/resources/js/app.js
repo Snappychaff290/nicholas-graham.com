@@ -1,12 +1,8 @@
-//import "./bootstrap";
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+    const headerLinks = document.querySelector(".header-links");
 
-document.getElementById("pointer").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("section-1")) {
-        const rect = card.getBoundingClientRect(),
-            x = e.clientX - rect.left,
-            y = e.clientY - rect.top;
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-        console.log("HERE");
-    }
-};
+    mobileMenuToggle.addEventListener("click", function () {
+        headerLinks.classList.toggle("active");
+    });
+});
