@@ -37,7 +37,10 @@
     .contact-me {
         font-size: 1.6rem !important;
     }
-
+    .cta-two {
+        align-self: center;
+        width: 90vw;
+    }
     .section-2 {
         display: flex;
         flex-direction: column;
@@ -51,6 +54,7 @@
     .hcihy {
         flex-wrap: wrap;
         justify-content: center;
+        align-content: center;
     }
     .container-content a div {
         font-size: 2rem;

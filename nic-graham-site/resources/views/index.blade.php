@@ -27,7 +27,7 @@
             <img src="img/Logo_white.svg" class="header-logo" />
         </a>
         <div class="header-links">
-            <a href="#section-2" class="header-link about-me">About Me</a>
+            <a href="#section-3" class="header-link about-me">About Me</a>
             <a href="/puter" class="header-link puter">Puter</a>
             <a href="/projects" class="header-link projects">Projects</a>
             <a href="/contact" class="header-link contact">Contact Me</a>
@@ -73,10 +73,12 @@
                             Learn more about what this entails by clicking the
                             Explore button below!
                         </p>
+                        <div class="hero-buttons">
                         <a href="/contact"><div>Contact Me</div></a>
                         <a href="#section-3" class="backup-cta"
                             ><div>Explore</div></a
                         >
+                        </div>
                     </div>
                 </div>
                 <div class="container-2">
@@ -242,8 +244,10 @@
                 and where to incorporate all of these, see the below images of
                 the process for the site you’re currently viewing
             </p>
-            <h3 class="typography">Typography / UX</h3>
-            <h3 class="ui">UI</h3>
+            <div class="typography-ui-style">
+                <h3 class="typography">Typography / UX</h3>
+                <h3 class="ui">UI</h3>
+            </div>
             <div class="images">
                 <div class="typography-border">
                     <img
@@ -274,7 +278,9 @@
                             putting more content out, even if only a few people
                             read it.
                         </p>
-                        <a href="/blogs"><div>Read More</div></a>
+                        <div class="section-3-button">
+                            <a href="/blogs"><div>Read More</div></a>
+                        </div>
                     </div>
                 </div>
                 <div class="option-2">
@@ -292,7 +298,9 @@
                             <li>Pink Santa</li>
                             <li>This Website!</li>
                         </ul>
-                        <a href="/projects"><div>Explore</div></a>
+                        <div class="section-3-button">
+                            <a href="/projects"><div>Explore</div></a>
+                        </div>
                     </div>
                 </div>
             </div>

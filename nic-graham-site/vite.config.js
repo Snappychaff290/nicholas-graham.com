@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/css/old_site/style-mobile.css",
                 "resources/css/old_site/style-small_screen.css",
                 "resources/css/old_site/style.css",
+                "resources/css/puter/puter.css",
                 "resources/js/app.js",
                 "resources/js/old_site/index.js",
             ],
