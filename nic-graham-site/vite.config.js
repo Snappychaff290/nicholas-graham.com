@@ -11,6 +11,8 @@ export default defineConfig({
                 "resources/css/old_site/overview.css",
                 "resources/css/old_site/style-mobile.css",
                 "resources/css/old_site/style-small_screen.css",
+                "resources/css/post.css",
+                "resources/css/posts.css",
                 "resources/css/old_site/style.css",
                 "resources/css/puter/puter.css",
                 "resources/js/app.js",
