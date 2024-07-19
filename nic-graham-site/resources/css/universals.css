@@ -1,0 +1,21 @@
+:root {
+    --gray: #2a2b2aff;
+    --yellow: #ffa630ff;
+    --platinum: #dfe0e2ff;
+    --platinumtranslucent: rgba(223, 224, 226, 0.8);
+    --red: #f93943;
+    --blue: #0496ff;
+    --purple: #7353baff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: var(--red);
+}

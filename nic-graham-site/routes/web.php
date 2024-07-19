@@ -1,60 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProjectController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/puter', [HomeController::class, 'puter'])->name('puter');
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
-Route::get('/Old-Site', function () {
-    return view('Old-Site');
-});
-Route::get('/blogs', function () {
-    return view('placeholder');
-});
-Route::get('/projects', function () {
-    return view('placeholder');
-});
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projects.show');
 
-Route::get('/in-progress', function () {
-    return view('placeholder');
-});
-Route::get('/contact', function () {
-    return view('placeholder');
-});
-
-Route::get('/puter', function () {
-    return view('placeholder');
-});
-
-Route::get('/posts', function () {
-    return view('posts');
-});
-
-Route::get('posts/{post}', function ($slug) {
-    $path = __DIR__ . "/../resources/posts/{$slug}.html";
-
-    if (! file_exists($path)) {
-        return redirect('/');
-    }
-
-    $post = cache()->remember("posts.{$slug}", 1200, function () use ($path) {
-        return file_get_contents($path);
-
-    });
-
-    return view('post', [
-        'post' => $post
-    ]);
-})->where('post', '[A-z_\-]+');
+Route::fallback([HomeController::class, 'placeholder']);

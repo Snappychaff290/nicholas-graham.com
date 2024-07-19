@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nicholas Graham</title>
-            @vite(['resources/js/app.js', 'resources/css/style.css', 'resources/css/style_mobile.css', 'build'])
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/509a141bf1.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="header-bar">
-        <a href="/" class="header-logo-link">
-            <img src="img/Logo_white.svg" class="header-logo" alt="Logo" />
-        </a>
-        <div class="mobile-menu-toggle">☰</div>
-        <div class="header-links">
-            <a href="#section-3" class="header-link about-me">About Me</a>
-            <a href="/puter" class="header-link puter">Puter</a>
-            <a href="/projects" class="header-link projects">Projects</a>
-            <a href="/contact" class="header-link contact">Contact Me</a>
-        </div>
-    </div>
+@extends('layouts.app')
 
-    <div class="section-1">
+@section('content')
+<div class="spacer"> </div>
+<div class="section-1">
         <div class="top-section-header">
             <p class="name-compliment">Hello, my name is</p>
             <h1 class="name gradient-words">Nicholas Graham</h1>
@@ -124,22 +104,29 @@
         <h2 class="gradient-words">More by Me</h2>
         <div class="options">
             <div class="option-1">
-                <div class="option-content">
-                    <h2>Blogs</h2>
-                    <p>
-                        Find out more about the things I am learning and
-                        potentially discover some things you have never
-                        thought about. I am writing in an attempt first and
-                        foremost to improve my literacy skills and become
-                        more articulate, but also because I want to start
-                        putting more content out, even if only a few people
-                        read it.
-                    </p>
-                    <div class="section-3-button">
-                        <a href="/blog"><div>Read More</div></a>
+    <div class="option-content">
+        <h2>Blogs</h2>
+        @if(isset($post))
+            <a href="{{ route('blog.show', $slug) }}" class="read-more">
+                <div class="blog-card">
+                    <img src="{{ asset('img/blog/' . ($post['meta']['image'] ?? 'default.jpg')) }}" alt="{{ $post['meta']['title'] }} - Thumbnail">
+                    <div class="blog-card-content">
+                        <h2>{{ $post['meta']['title'] }}</h2>
+                        @if(isset($post['meta']['description']))
+                            <p class="description">{{$post['meta']['description']}}</p>
+                        @endif
+                        <p class="date">{{ $post['meta']['date'] }}</p>
                     </div>
                 </div>
-            </div>
+            </a>
+        @else
+            <p>No blog posts available at the moment.</p>
+        @endif
+        <div class="section-3-button">
+            <a href="{{ route('blog.index') }}"><div>All Blogs</div></a>
+        </div>
+    </div>
+</div>
             <div class="option-2">
                 <div class="option-content">
                     <h2>Projects</h2>
@@ -164,5 +151,4 @@
     </div>
 
     <script src="app.js"></script>
-</body>
-</html>
+@endsection
