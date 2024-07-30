@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nicholas Graham</title>
     @vite(['resources/js/app.js', 'resources/css/style.css', 'resources/css/style_mobile.css', 'resources/css/blog/blog.css', "resources/css/universals.css",
-                "resources/css/headerbar.css", 'build'])
+                "resources/css/headerbar.css"])
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
