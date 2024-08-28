@@ -1,7 +1,7 @@
 <!doctype html>
 
 <title>My Blog</title>
-@vite(['resources/css/posts.css', 'build'])
+@vite(['resources/css/posts.css'])
 
 <body>
 <article>
